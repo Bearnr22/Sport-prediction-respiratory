@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Predictor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+</head>
+<body>
+  <header>
+    <h1>Sports Predictor</h1>
+  </header>
+  <main>
+    <section class="base-url">
+      <h2>Server Settings</h2>
+      <input type="text" id="baseUrl" placeholder="Enter backend base URL (e.g. https://api.example.com)" />
+      <button id="saveBaseUrl">Save</button>
+      <button id="testHealth">Test /health</button>
+      <div id="healthStatus"></div>
+    </section>
+    <section class="prediction">
+      <h2>Prediction</h2>
+      <label for="sport">Sport:</label>
+      <select id="sport">
+        <option value="football">Football</option>
+        <option value="tennis">Tennis</option>
+        <option value="racing">Racing</option>
+      </select>
+      <label for="context">Context JSON:</label>
+      <textarea id="context" rows="6" placeholder='{"home_team":"Arsenal","away_team":"Brighton"}'></textarea>
+      <label for="odds">Market Odds JSON (optional):</label>
+      <textarea id="odds" rows="4" placeholder='{"home":2.1,"draw":3.4,"away":3.6}'></textarea>
+      <button id="predict">Predict</button>
+      <pre id="result"></pre>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
